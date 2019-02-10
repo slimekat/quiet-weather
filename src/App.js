@@ -2,7 +2,7 @@ import React from "react";
 import Titles from "./components/Titles"
 import Form from "./components/Form"
 import Weather from "./components/Weather"
-import ScaleButton from "./components/ScaleButton"
+import Scale from "./components/Scale"
 
 const API_KEY = "b7ef65cab5a1a9406d5088b8b1a40e00";
 
@@ -15,7 +15,7 @@ class App extends React.Component {
     humidity: undefined,
     description: undefined,
     error: undefined,
-    scale: "celsius",
+    scale: "C",
 
 
     coords: {
@@ -34,24 +34,11 @@ class App extends React.Component {
   }
 
   tempConvert(inputTemp) {
-    if (this.state.scale === "celsius") {
+    if (this.state.scale === "C") {
       return inputTemp;
     } else {
       inputTemp = (inputTemp + 32);
       return inputTemp;
-    }
-  }
-
-  changeScale(){
-    console.log(this.state.scale);
-    if (this.state.scale === "celsius") {
-      this.setState({
-        scale:"fahrenheit"
-      })
-    }else{
-      this.setState({
-        scale:"celsius"
-      })
     }
   }
 
@@ -96,8 +83,6 @@ class App extends React.Component {
     }
   }
 
-  
-
   render() {
     return (
       <div>
@@ -120,9 +105,8 @@ class App extends React.Component {
                 <div className="row-xs-4 form-container">
                   <Form getWeather={this.getWeather} />
                   <button onClick={this.getLocation.bind(this)}>X</button>
-                  <ScaleButton 
-                    scale={this.state.scale} 
-                    changeScale={this.changeScale.bind(this)}
+                  <Scale 
+                    selection={this.state.scale} 
                   />
                 </div>
               </div>
