@@ -1,7 +1,5 @@
 import React from "react";
 
-
-
 const Weather = props => (
     <div className="weather__info">
         <i className="wi wi-owm-721 title-container__weather-icon"></i>
@@ -13,9 +11,7 @@ const Weather = props => (
             }
             {
                 props.temperature && <p className="weather__key">Temperature:
-                    <span className="weather__value"> {props.tempConvert(props.temperature - 273.15).toFixed(1)} {props.scale == "celsius" ? "C":"F"}</span>
-                    {/* <span className="weather__value"> {(props.temperature - 273.15).toFixed(1)} C</span> */}
-
+                    <span className="weather__value"> {props.tempConvert(props.temperature - 273.15).toFixed(1)} {props.scale === "C" ? "C":"F"}</span>
                 </p>
             }
             {

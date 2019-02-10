@@ -42,6 +42,12 @@ class App extends React.Component {
     }
   }
 
+  changeScale = change => {
+    this.setState({
+      scale: change.target.value
+    });
+  };
+
   getLocation = async () => {
     let pos = await new Promise((resolve, reject) => {
       navigator.geolocation.getCurrentPosition(resolve, reject)
@@ -100,13 +106,15 @@ class App extends React.Component {
                     description={this.state.description}
                     error={this.state.error}
                     tempConvert={this.tempConvert.bind(this)}
+                    scale={this.state.scale}
                   />
                 </div>
                 <div className="row-xs-4 form-container">
                   <Form getWeather={this.getWeather} />
                   <button onClick={this.getLocation.bind(this)}>X</button>
-                  <Scale 
-                    selection={this.state.scale} 
+                  <Scale
+                    selection={this.state.scale}
+                    onChange={this.changeScale}
                   />
                 </div>
               </div>
@@ -117,8 +125,5 @@ class App extends React.Component {
     );
   }
 };
-
-
-
 
 export default App;
