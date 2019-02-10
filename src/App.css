@@ -1,32 +1,188 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Merriweather:100,200,300,300i,400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
+body {
+  font-family: "Open Sans", serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.wrapper {
+  background: linear-gradient(180deg, #231f31, #0d020e);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
+  height: 90vh;
+  background: #fff;
+  box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+  width: 80%;
+  margin: 0 auto;
+  border-radius:75px;
+  overflow:hidden;
+  max-width:50%;
+}
+
+.container-fluid {
+  width:100%;
+  padding:0 0;
+  border-radius:25px;
+}
+
+.title-container {
+  height: 65vh;
+  background: url("img/weather-app-bg.png") center center no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: top;
+  justify-content: flex-start;
+  text-align: center;
+  
+  color: rgb(250, 220, 181);
 }
 
-.App-link {
-  color: #61dafb;
+.title-container__weather-icon {
+  font-size: 200px;
+  margin: 0px 0;
+  /* margin-right: 8%; */
+  color: rgb(250, 220, 181);
+  border-color: #000;
+  text-shadow: 2px 2px 8px #000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.title-container__title {
+  font-size: 40px;
+  letter-spacing: 2px;
+  line-height: 1.3;
+  font-family: 'Roboto Slab', serif;
+  margin:0 2%;
+  margin-top:8%;
+  /* white-space:nowrap; */
+}
+
+.title-container__subtitle {
+  font-style: italic;
+  font-weight: 100;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-family: "Merriweather", serif;
+  margin:0 2%;
+}
+
+.form-container {
+  background-color: #13041f;
+  height: 30vh;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+input[type="text"] {
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 1px #f16051;
+  width: 30%;
+  padding-bottom: 4px;
+  color: #fff !important;
+  /* font-weight: ; */
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+input[type="text"] { 
+    outline: none;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #2c3e50 inset;
+    -webkit-text-fill-color: #fff !important;
+}
+
+button {
+  border: 0;
+  padding: 8px 20px;
+  margin: 0 2px;
+  border-radius: 2px;
+  /* font-weight: lighter; */
+  letter-spacing: 1px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #f16051;
+  color: #fff;
+  font-weight: 300;
+}
+
+button:active {
+  outline: none;
+}
+
+.weather__output {
+  padding-top: 5%;
+}
+
+.weather__info {
+  height: 20vh;
+  width: auto;
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  padding-top: 50px;
+  /* padding-left: 50px; */
+}
+
+.weather__key {
+  color: #f16051;
+  border-bottom: solid 2px rgba(255,255,255,0.06);
+  padding: 5px 5px 0;
+  font-weight: 400;
+}
+
+.weather__key:last-child {
+  border: 0;
+}
+
+.weather__value {
+  color: rgb(250, 220, 181);
+  font-weight: 300;
+}
+
+.weather__error {
+  color: #f16051;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    height: 100vh;
+    background: #fff;
+    box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+    width: 100%;
+    margin: 0 auto;
+    border-radius:0px;
+    overflow:hidden;
+    max-width:100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .title-container {
+    height: 75vh;
+  }
+
+  .form-container {
+    padding-top:5%;
+  }
+
+  .title-container__weather-icon {
+    font-size: 40vw;
+    margin: 0px 0;
+    /* margin-right: 8%; */
+    color: rgb(250, 220, 181);
+    border-color: #000;
+    text-shadow: 2px 2px 8px #000;
   }
 }
