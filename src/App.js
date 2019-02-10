@@ -2,9 +2,9 @@ import React from "react";
 import Titles from "./components/Titles"
 import Form from "./components/Form"
 import Weather from "./components/Weather"
+import ScaleButton from "./components/ScaleButton"
 
 const API_KEY = "b7ef65cab5a1a9406d5088b8b1a40e00";
-var celsius;
 
 class App extends React.Component {
 
@@ -15,7 +15,7 @@ class App extends React.Component {
     humidity: undefined,
     description: undefined,
     error: undefined,
-    scale: celsius,
+    scale: "celsius",
 
 
     coords: {
@@ -34,14 +34,26 @@ class App extends React.Component {
   }
 
   tempConvert(inputTemp) {
-    if (this.scale == celsius) {
-      return;
+    if (this.state.scale === "celsius") {
+      return inputTemp;
     } else {
       inputTemp = (inputTemp + 32);
       return inputTemp;
     }
   }
 
+  changeScale(){
+    console.log(this.state.scale);
+    if (this.state.scale === "celsius") {
+      this.setState({
+        scale:"fahrenheit"
+      })
+    }else{
+      this.setState({
+        scale:"celsius"
+      })
+    }
+  }
 
   getLocation = async () => {
     let pos = await new Promise((resolve, reject) => {
@@ -83,6 +95,9 @@ class App extends React.Component {
       });
     }
   }
+
+  
+
   render() {
     return (
       <div>
@@ -99,12 +114,16 @@ class App extends React.Component {
                     humidity={this.state.humidity}
                     description={this.state.description}
                     error={this.state.error}
-                    tempConvert={this.tempConvert}
+                    tempConvert={this.tempConvert.bind(this)}
                   />
                 </div>
                 <div className="row-xs-4 form-container">
                   <Form getWeather={this.getWeather} />
                   <button onClick={this.getLocation.bind(this)}>X</button>
+                  <ScaleButton 
+                    scale={this.state.scale} 
+                    changeScale={this.changeScale.bind(this)}
+                  />
                 </div>
               </div>
             </div>

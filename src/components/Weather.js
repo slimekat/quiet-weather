@@ -13,8 +13,8 @@ const Weather = props => (
             }
             {
                 props.temperature && <p className="weather__key">Temperature:
-                    {/* <span className="weather__value"> {props.tempConvert(props.temperature - 273.15).toFixed(1)} C</span> */}
-                    <span className="weather__value"> {(props.temperature - 273.15).toFixed(1)} C</span>
+                    <span className="weather__value"> {props.tempConvert(props.temperature - 273.15).toFixed(1)} {props.scale == "celsius" ? "C":"F"}</span>
+                    {/* <span className="weather__value"> {(props.temperature - 273.15).toFixed(1)} C</span> */}
 
                 </p>
             }
