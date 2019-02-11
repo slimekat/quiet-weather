@@ -108,13 +108,18 @@ class App extends React.Component {
                     selection={this.state.scale}
                     onChange={this.changeScale}
                   />
+
                 </div>
                 <div className="row-xs-4 form-container">
-                  <AutoCompleteText
-                    items={cities}
-                    getWeather={this.getWeather}
-                  />
-                  <button onClick={this.getLocation.bind(this)}><i className="fas fa-location-arrow"></i></button>
+                  <div className="input-container">
+                  <AutoCompleteText className="input-field"
+                      items={cities}
+                      getWeather={this.getWeather}
+                    />
+                  </div>
+                    
+ 
+                  <button className="location-btn" onClick={this.getLocation.bind(this)}><i className="fas fa-location-arrow"></i></button>
                   
                 </div>
               </div>

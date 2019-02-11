@@ -18,7 +18,9 @@ body {
   height: 90vh;
   background: #fff;
   box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
-  width: 80%;
+  /* width: 80%; */
+  min-width:200px;
+  max-width:900px;
   margin: 0 auto;
   border-radius:75px;
   overflow:hidden;
@@ -75,10 +77,19 @@ body {
 .form-container {
   background-color: #13041f;
   height: 30vh;
-  padding: 8% 8%;
+  padding: 20px 8%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  flex-wrap:wrap;
+  flex-grow:1;
+}
+
+.form-container > :first-child {
+  justify-content:right;
 }
 
 input[type="text"] {
@@ -106,20 +117,100 @@ input:-webkit-autofill {
 
 button {
   border: 0;
-  padding: 10px 20px;
+  padding: 8px 18px;
   margin: 0 2px;
   border-radius: 2px;
   /* font-weight: lighter; */
+  /* font-weight:bolder; */
   letter-spacing: 1px;
-  font-size: 15px;
+  font-size: 18px;
   cursor: pointer;
-  background-color: #f16051;
-  color: #fff;
-  font-weight: 300;
+  background-color: #f7d782;
+  color: rgb(55, 19, 87);
+  font-weight: 800;
 }
 
 button:active {
   outline: none;
+}
+
+.location-btn {
+  position:relative;
+  right:230px;
+  height:38px;
+}
+
+.scale-field {
+  font-family: "Lucida Grande", Tahoma, Verdana, sans-serif;
+  /* padding: 0 0 20% 75%; */
+  overflow: hidden;
+  float:right;
+  margin-top:255px;
+  padding:0% 8%;
+  margin-bottom:10%; 
+  text-align:right;
+}
+
+.scale-title {
+  margin-bottom: 6px;
+}
+
+.scale-field input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+}
+
+.scale-field label {
+  float: left;
+  
+}
+
+.scale-field label {
+  display: inline-block;
+  width: 60px;
+  background-color: rgb(55, 19, 87);
+  color: #f7d782;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: none;
+  padding: 6px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.9), 0 0px rgba(255, 255, 255, 0.9);
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition:    all 0.1s ease-in-out;
+  -ms-transition:     all 0.1s ease-in-out;
+  -o-transition:      all 0.1s ease-in-out;
+  transition:         all 0.1s ease-in-out;
+  
+}
+
+.scale-field label:hover {
+	cursor: pointer;
+}
+
+.scale-field input:checked + label {
+  background-color: #f7d782;
+	color: rgb(19, 5, 31);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.scale-field label:first-of-type {
+  border-radius: 4px 0 0 4px;
+}
+
+.scale-field label:last-of-type {
+  border-radius: 0 4px 4px 0;
+}
+
+.input-field {
+  display:flex;
 }
 
 .weather__output {
@@ -160,16 +251,18 @@ button:active {
 }
 
 .AutoCompleteText {
-  width:80%;
+  width:200px;
   border:1px solid grey;
   font-family: "Open Sans", serif;
   color: rgb(250, 220, 181);
-  height:25%;
+  height:40px;
   display:flex;
+  flex-direction: row;
+  position:absolute;
 }
 
 .AutoCompleteText input[type="text"] {
-  /* width:100%; */
+  width:100%;
   border:none;
   font-family: "Open Sans", serif;
   color: rgb(250, 220, 181);
@@ -182,7 +275,13 @@ button:active {
   text-align:left;
   margin:0;
   padding:0;
+  width:100%;
   border-top: 1px solid grey;
+  position:absolute;
+  background-color:#000;
+  z-index:2;
+  overflow:auto;
+  height:15vh;
 }
 
 .AutoCompleteText li  {
@@ -196,8 +295,11 @@ button:active {
 }
 
 .AutoCompleteText__submit-btn{
-  margin-top:5%;
+  /* margin-top:15%; */
   display:flex;
+  position:relative;
+  top:5px;
+  right:2px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -214,6 +316,12 @@ button:active {
 
   .title-container {
     height: 75vh;
+  }
+
+  .location-btn {
+    position:relative;
+    right:0px;
+    height:38px;
   }
 
   .form-container {
