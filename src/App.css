@@ -214,8 +214,13 @@ button:active {
 }
 
 .weather__output {
+  margin-top:25px;
   padding-top: 5%;
-  text-align:left;
+  text-align: left;
+}
+
+.weather_info:first-child {
+  /* padding-top: 15px; */
 }
 
 .weather__info {
@@ -224,7 +229,7 @@ button:active {
   font-size: 20px;
   font-weight: 200;
   letter-spacing: 2px;
-  padding-top: 50px;
+  padding-top: 10px;
   margin: 0 auto;
   /* padding-left: 50px; */
 }
@@ -316,8 +321,14 @@ button:active {
     max-width: 100%;
   }
 
+  .weather__output {
+    margin-top:10px;
+    padding-top: 5%;
+    text-align: left;
+  }
+
   .scale-field {
-    margin-top:70%;
+    margin-top: 70%;
   }
 
   .title-container {
@@ -337,7 +348,7 @@ button:active {
   .title-container__weather-icon {
     font-size: 35vw;
     margin: 0px 0;
-    margin-bottom:20px;
+    margin-bottom: 20px;
     /* margin-right: 8%; */
     color: rgb(250, 220, 181);
     border-color: #000;
