@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "downshift": "^3.2.2",
     "react": "^16.8.1",
+    "react-autocomplete": "^1.8.1",
     "react-dom": "^16.8.1",
     "react-geolocated": "^2.4.1",
     "react-scripts": "2.1.3",

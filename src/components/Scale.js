@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 const Scale = props => {
     let { selection, onChange } = props;
@@ -7,9 +7,8 @@ const Scale = props => {
             <form >
                 <input checked={selection === "C"} onChange={onChange} type="radio" value="C" name="scaleToggle" id="Togglescale-C" />
                 <input checked={selection === "F"} onChange={onChange} type="radio" value="F" name="scaleToggle" id="Togglescale-F" />
-                {/* <label for="scale">{props.scale == "celsius" ? "C" : "F"}</label> */}
             </form>
-        </div >
+        </div>
     );
 }
 

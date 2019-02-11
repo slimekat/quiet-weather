@@ -75,8 +75,10 @@ body {
 .form-container {
   background-color: #13041f;
   height: 30vh;
-  padding-top: 50px;
-  padding-left: 50px;
+  padding: 8% 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 input[type="text"] {
@@ -84,11 +86,11 @@ input[type="text"] {
   border: 0;
   border-bottom: solid 1px #f16051;
   width: 30%;
+  height: auto;
   padding-bottom: 4px;
   color: #fff !important;
-  /* font-weight: ; */
   letter-spacing: 2px;
-  margin-bottom: 30px;
+  margin-bottom: 4%;
   margin-right: 20px;
   font-size: 20px;
 }
@@ -104,7 +106,7 @@ input:-webkit-autofill {
 
 button {
   border: 0;
-  padding: 8px 20px;
+  padding: 10px 20px;
   margin: 0 2px;
   border-radius: 2px;
   /* font-weight: lighter; */
@@ -155,6 +157,47 @@ button:active {
   font-size: 20px;
   letter-spacing: 1px;
   font-weight: 200;
+}
+
+.AutoCompleteText {
+  width:80%;
+  border:1px solid grey;
+  font-family: "Open Sans", serif;
+  color: rgb(250, 220, 181);
+  height:25%;
+  display:flex;
+}
+
+.AutoCompleteText input[type="text"] {
+  /* width:100%; */
+  border:none;
+  font-family: "Open Sans", serif;
+  color: rgb(250, 220, 181);
+  /* margin-bottom:10px */
+  /* padding:15px 5px; */
+}
+
+.AutoCompleteText ul {
+  list-style-type: none;
+  text-align:left;
+  margin:0;
+  padding:0;
+  border-top: 1px solid grey;
+}
+
+.AutoCompleteText li  {
+  padding:10px 5px;
+  cursor: pointer;
+}
+
+.AutoCompleteText li:hover {
+  text-decoration: underline;
+  background-color:grey;
+}
+
+.AutoCompleteText__submit-btn{
+  margin-top:5%;
+  display:flex;
 }
 
 @media only screen and (max-width: 600px) {

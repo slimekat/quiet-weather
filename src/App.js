@@ -1,9 +1,9 @@
 import React from "react";
 import Titles from "./components/Titles"
-import Form from "./components/Form"
 import Weather from "./components/Weather"
 import Scale from "./components/Scale"
-
+import AutoCompleteText from "./components/AutoCompleteText"
+import cities from "./components/cities"
 const API_KEY = "b7ef65cab5a1a9406d5088b8b1a40e00";
 
 class App extends React.Component {
@@ -16,7 +16,6 @@ class App extends React.Component {
     description: undefined,
     error: undefined,
     scale: "C",
-
 
     coords: {
       latitude: undefined,
@@ -57,11 +56,8 @@ class App extends React.Component {
     this.updateState(data);
   }
 
-  getWeather = async (e) => {
-    e.preventDefault();
-    const city = e.target.elements.city.value;
-    const country = e.target.elements.country.value;
-    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}`);
+  getWeather = async (city) => {
+    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}`);
     const data = await api_call.json();
     this.updateState(data);
   }
@@ -108,14 +104,18 @@ class App extends React.Component {
                     tempConvert={this.tempConvert.bind(this)}
                     scale={this.state.scale}
                   />
-                </div>
-                <div className="row-xs-4 form-container">
-                  <Form getWeather={this.getWeather} />
-                  <button onClick={this.getLocation.bind(this)}>X</button>
                   <Scale
                     selection={this.state.scale}
                     onChange={this.changeScale}
                   />
+                </div>
+                <div className="row-xs-4 form-container">
+                  <AutoCompleteText
+                    items={cities}
+                    getWeather={this.getWeather}
+                  />
+                  <button onClick={this.getLocation.bind(this)}><i className="fas fa-location-arrow"></i></button>
+                  
                 </div>
               </div>
             </div>
@@ -125,5 +125,7 @@ class App extends React.Component {
     );
   }
 };
+
+
 
 export default App;
