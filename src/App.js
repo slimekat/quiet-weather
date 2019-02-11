@@ -16,6 +16,7 @@ class App extends React.Component {
     description: undefined,
     error: undefined,
     scale: "C",
+    owmcode:"721",
 
     coords: {
       latitude: undefined,
@@ -80,6 +81,7 @@ class App extends React.Component {
         country: data.sys.country,
         humidity: data.main.humidity,
         description: data.weather[0].description,
+        owmcode: data.weather[0].id,
         error: ""
       });
     }
@@ -103,6 +105,7 @@ class App extends React.Component {
                     error={this.state.error}
                     tempConvert={this.tempConvert.bind(this)}
                     scale={this.state.scale}
+                    owmcode={this.state.owmcode}
                   />
                   <Scale
                     selection={this.state.scale}

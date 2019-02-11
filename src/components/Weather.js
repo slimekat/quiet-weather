@@ -2,7 +2,8 @@ import React from "react";
 
 const Weather = props => (
     <div className="weather__info">
-        <i className="wi wi-owm-721 title-container__weather-icon"></i>
+        <i className={`wi wi-owm-${props.owmcode} title-container__weather-icon`}></i>
+        {/* <i className={"wi wi-owm-721 title-container__weather-icon"}></i> */}
         <div className="weather__output">
             {
                 props.city && props.country && <p className="weather__key">Location:

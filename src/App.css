@@ -17,20 +17,20 @@ body {
 .main {
   height: 90vh;
   background: #fff;
-  box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
-  /* width: 80%; */
-  min-width:200px;
-  max-width:900px;
+  box-shadow: 0px 13px 40px -13px rgba(0, 0, 0, 0.75);
+  width: 80%;
+  min-width: 400px;
+  max-width: 900px;
   margin: 0 auto;
-  border-radius:75px;
-  overflow:hidden;
-  max-width:50%;
+  border-radius: 75px;
+  overflow: hidden;
+  max-width: 50%;
 }
 
 .container-fluid {
-  width:100%;
-  padding:0 0;
-  border-radius:25px;
+  width: 100%;
+  padding: 0 0;
+  border-radius: 25px;
 }
 
 .title-container {
@@ -42,7 +42,7 @@ body {
   align-items: top;
   justify-content: flex-start;
   text-align: center;
-  
+
   color: rgb(250, 220, 181);
 }
 
@@ -60,8 +60,8 @@ body {
   letter-spacing: 2px;
   line-height: 1.3;
   font-family: 'Roboto Slab', serif;
-  margin:0 2%;
-  margin-top:8%;
+  margin: 0 2%;
+  margin-top: 8%;
   /* white-space:nowrap; */
 }
 
@@ -71,7 +71,7 @@ body {
   letter-spacing: 1px;
   line-height: 1.5;
   font-family: "Merriweather", serif;
-  margin:0 2%;
+  margin: 0 2%;
 }
 
 .form-container {
@@ -84,12 +84,12 @@ body {
   display: flex;
   flex-direction: row;
   align-items: top;
-  flex-wrap:wrap;
-  flex-grow:1;
+  flex-wrap: wrap;
+  flex-grow: 1;
 }
 
-.form-container > :first-child {
-  justify-content:right;
+.form-container> :first-child {
+  justify-content: right;
 }
 
 input[type="text"] {
@@ -106,13 +106,13 @@ input[type="text"] {
   font-size: 20px;
 }
 
-input[type="text"] { 
-    outline: none;
+input[type="text"] {
+  outline: none;
 }
 
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px #2c3e50 inset;
-    -webkit-text-fill-color: #fff !important;
+  -webkit-box-shadow: 0 0 0 30px #2c3e50 inset;
+  -webkit-text-fill-color: #fff !important;
 }
 
 button {
@@ -135,20 +135,20 @@ button:active {
 }
 
 .location-btn {
-  position:relative;
-  right:230px;
-  height:38px;
+  position: relative;
+  right: 230px;
+  height: 38px;
 }
 
 .scale-field {
   font-family: "Lucida Grande", Tahoma, Verdana, sans-serif;
   /* padding: 0 0 20% 75%; */
   overflow: hidden;
-  float:right;
-  margin-top:255px;
-  padding:0% 8%;
-  margin-bottom:10%; 
-  text-align:right;
+  float: right;
+  margin-top: 255px;
+  padding: 0% 8%;
+  margin-bottom: 10%;
+  text-align: right;
 }
 
 .scale-title {
@@ -156,17 +156,17 @@ button:active {
 }
 
 .scale-field input {
-    position: absolute !important;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    width: 1px;
-    border: 0;
-    overflow: hidden;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
 }
 
 .scale-field label {
   float: left;
-  
+
 }
 
 .scale-field label {
@@ -183,20 +183,20 @@ button:active {
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.9), 0 0px rgba(255, 255, 255, 0.9);
   -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition:    all 0.1s ease-in-out;
-  -ms-transition:     all 0.1s ease-in-out;
-  -o-transition:      all 0.1s ease-in-out;
-  transition:         all 0.1s ease-in-out;
-  
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+
 }
 
 .scale-field label:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
-.scale-field input:checked + label {
+.scale-field input:checked+label {
   background-color: #f7d782;
-	color: rgb(19, 5, 31);
+  color: rgb(19, 5, 31);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -210,11 +210,12 @@ button:active {
 }
 
 .input-field {
-  display:flex;
+  display: flex;
 }
 
 .weather__output {
   padding-top: 5%;
+  text-align:left;
 }
 
 .weather__info {
@@ -224,12 +225,13 @@ button:active {
   font-weight: 200;
   letter-spacing: 2px;
   padding-top: 50px;
+  margin: 0 auto;
   /* padding-left: 50px; */
 }
 
 .weather__key {
-  color: #f16051;
-  border-bottom: solid 2px rgba(255,255,255,0.06);
+  color: #e29d7d;
+  border-bottom: solid 2px rgba(255, 255, 255, 0.06);
   padding: 5px 5px 0;
   font-weight: 400;
 }
@@ -240,30 +242,30 @@ button:active {
 
 .weather__value {
   color: rgb(250, 220, 181);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .weather__error {
   color: #f16051;
   font-size: 20px;
   letter-spacing: 1px;
-  font-weight: 200;
+  font-weight: 400;
 }
 
 .AutoCompleteText {
-  width:200px;
-  border:1px solid grey;
+  width: 200px;
+  border: 1px solid grey;
   font-family: "Open Sans", serif;
   color: rgb(250, 220, 181);
-  height:40px;
-  display:flex;
+  height: 40px;
+  display: flex;
   flex-direction: row;
-  position:absolute;
+  position: absolute;
 }
 
 .AutoCompleteText input[type="text"] {
-  width:100%;
-  border:none;
+  width: 100%;
+  border: none;
   font-family: "Open Sans", serif;
   color: rgb(250, 220, 181);
   /* margin-bottom:10px */
@@ -272,46 +274,50 @@ button:active {
 
 .AutoCompleteText ul {
   list-style-type: none;
-  text-align:left;
-  margin:0;
-  padding:0;
-  width:100%;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
   border-top: 1px solid grey;
-  position:absolute;
-  background-color:#000;
-  z-index:2;
-  overflow:auto;
-  height:15vh;
+  position: absolute;
+  background-color: #000;
+  z-index: 2;
+  overflow: auto;
+  height: 15vh;
 }
 
-.AutoCompleteText li  {
-  padding:10px 5px;
+.AutoCompleteText li {
+  padding: 10px 5px;
   cursor: pointer;
 }
 
 .AutoCompleteText li:hover {
   text-decoration: underline;
-  background-color:grey;
+  background-color: grey;
 }
 
-.AutoCompleteText__submit-btn{
+.AutoCompleteText__submit-btn {
   /* margin-top:15%; */
-  display:flex;
-  position:relative;
-  top:5px;
-  right:2px;
+  display: flex;
+  position: relative;
+  top: 5px;
+  right: 2px;
 }
 
 @media only screen and (max-width: 600px) {
   .main {
     height: 100vh;
     background: #fff;
-    box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+    box-shadow: 0px 13px 40px -13px rgba(0, 0, 0, 0.75);
     width: 100%;
     margin: 0 auto;
-    border-radius:0px;
-    overflow:hidden;
-    max-width:100%;
+    border-radius: 0px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .scale-field {
+    margin-top:70%;
   }
 
   .title-container {
@@ -319,21 +325,38 @@ button:active {
   }
 
   .location-btn {
-    position:relative;
-    right:0px;
-    height:38px;
+    position: relative;
+    right: 0px;
+    height: 38px;
   }
 
   .form-container {
-    padding-top:5%;
+    padding-top: 5%;
   }
 
   .title-container__weather-icon {
-    font-size: 40vw;
+    font-size: 35vw;
     margin: 0px 0;
+    margin-bottom:20px;
     /* margin-right: 8%; */
     color: rgb(250, 220, 181);
     border-color: #000;
     text-shadow: 2px 2px 8px #000;
+  }
+
+  .title-container__title {
+    font-size: 35px;
+    letter-spacing: 2px;
+    line-height: 1.3;
+    font-family: 'Roboto Slab', serif;
+    margin: 0 0%;
+    margin-top: 4%;
+    /* white-space:nowrap; */
+  }
+}
+
+@media only screen and (max-height:680px) {
+  .scale-field {
+    margin-top: 240px;
   }
 }
