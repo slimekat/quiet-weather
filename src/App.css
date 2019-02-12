@@ -12,6 +12,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* min-height:800px; */
 }
 
 .main {
@@ -19,6 +20,7 @@ body {
   background: #fff;
   box-shadow: 0px 13px 40px -13px rgba(0, 0, 0, 0.75);
   width: 80%;
+  /* min-height:600px; */
   min-width: 500px;
   max-width: 800px;
   margin: 0 auto;
@@ -35,12 +37,13 @@ body {
 
 .title-container {
   height: 65vh;
-  background: url("img/weather-app-bg.png") center center no-repeat;
+  -webkit-background: url("img/weather-app-bg-min.png") center center no-repeat;
+  background: url("img/weather-app-bg.webp") center center no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: top;
-  justify-content: flex-start;
+  justify-content: space-between;
   text-align: center;
 
   color: rgb(250, 220, 181);
@@ -76,7 +79,7 @@ body {
 
 .form-container {
   background-color: #13041f;
-  height: 30vh;
+  height: 20vh;
   padding: 20px 8%;
   display: flex;
   justify-content: space-between;
@@ -86,10 +89,23 @@ body {
   align-items: top;
   flex-wrap: wrap;
   flex-grow: 1;
+  border: 0;
+  outline:0;
 }
 
 .form-container> :first-child {
   justify-content: right;
+}
+
+.credits-container {
+  /* heig ht:100%; */
+  font-size:18px;
+  text-align: center;
+  background-color: #13041f;
+  margin:0;
+  padding-bottom:4%;
+  color:#4d137c;
+  text-shadow: 2px 1px 2px black;
 }
 
 input[type="text"] {
@@ -120,8 +136,6 @@ button {
   padding: 8px 18px;
   margin: 0 2px;
   border-radius: 2px;
-  /* font-weight: lighter; */
-  /* font-weight:bolder; */
   letter-spacing: 1px;
   font-size: 18px;
   cursor: pointer;
@@ -135,7 +149,6 @@ button:active {
 }
 
 .location-btn {
-  /* position: relative; */
   float:right;
   right: 230px;
   height: 38px;
@@ -143,17 +156,11 @@ button:active {
 
 .scale-field {
   font-family: "Lucida Grande", Tahoma, Verdana, sans-serif;
-  /* padding: 0 0 20% 75%; */
   overflow: hidden;
-  float: right;
-  margin-top: 255px;
   padding: 0% 8%;
-  margin-bottom: 10%;
+  margin-bottom: 10px;
   text-align: right;
-}
-
-.scale-title {
-  margin-bottom: 6px;
+  flex-shrink:0;
 }
 
 .scale-field input {
@@ -163,11 +170,6 @@ button:active {
   width: 1px;
   border: 0;
   overflow: hidden;
-}
-
-.scale-field label {
-  float: left;
-
 }
 
 .scale-field label {
@@ -214,25 +216,28 @@ button:active {
   display: flex;
 }
 
+.weather-container {
+  display:flex;
+  flex-direction: column;
+  align-items: top;
+  justify-content: space-between;
+  text-align: center;
+  flex-grow:0;
+}
+
 .weather__output {
   margin-top:25px;
   padding-top: 5%;
   text-align: left;
 }
 
-.weather_info:first-child {
-  /* padding-top: 15px; */
-}
-
 .weather__info {
-  height: 20vh;
   width: auto;
   font-size: 20px;
   font-weight: 200;
   letter-spacing: 2px;
   padding-top: 10px;
   margin: 0 auto;
-  /* padding-left: 50px; */
 }
 
 .weather__key {
@@ -258,6 +263,12 @@ button:active {
   font-weight: 400;
 }
 
+.scale-icon {
+  font-size:28px;
+  padding-left:2%;
+
+}
+
 .AutoCompleteText {
   width: 300px;
   border: 1px solid grey;
@@ -274,8 +285,6 @@ button:active {
   border: none;
   font-family: "Open Sans", serif;
   color: rgb(250, 220, 181);
-  /* margin-bottom:10px */
-  /* padding:15px 5px; */
 }
 
 .AutoCompleteText ul {
@@ -303,7 +312,6 @@ button:active {
 }
 
 .AutoCompleteText__submit-btn {
-  /* margin-top:15%; */
   display: flex;
   position: relative;
   top: 5px;
@@ -321,6 +329,7 @@ button:active {
     overflow: hidden;
     max-width: 100%;
     min-width: 300px;
+    min-height:600px;
   }
 
   .AutoCompleteText {
@@ -334,7 +343,9 @@ button:active {
   }
 
   .scale-field {
-    margin-top: 70%;
+    /* margin-top: 70%; */
+    /* flex-shrink:0; */
+    flex-grow:0;
   }
 
   .title-container {
@@ -355,7 +366,6 @@ button:active {
     font-size: 35vw;
     margin: 0px 0;
     margin-bottom: 20px;
-    /* margin-right: 8%; */
     color: rgb(250, 220, 181);
     border-color: #000;
     text-shadow: 2px 2px 8px #000;
@@ -368,12 +378,16 @@ button:active {
     font-family: 'Roboto Slab', serif;
     margin: 0 0%;
     margin-top: 4%;
-    /* white-space:nowrap; */
   }
-}
 
-@media only screen and (max-height:680px) {
-  .scale-field {
-    margin-top: 240px;
+  .credits-container {
+    /* heig ht:100%; */
+    font-size:14px;
+    text-align: center;
+    background-color: #13041f;
+    /* margin-top:4%; */
+    /* padding-bottom:4%; */
+    color:#be95e0;
+    text-shadow: 2px 1px 2px black;
   }
 }

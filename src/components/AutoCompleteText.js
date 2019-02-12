@@ -39,12 +39,12 @@ export default class AutoCompleteText extends React.Component {
         );
     }
 
-    onSubmit(e){
+    onSubmit(e) {
         e.preventDefault();
         this.props.getWeather(this.state.text);
-        this.setState(() =>({
-            text:'',
-            suggestions:[],
+        this.setState(() => ({
+            text: '',
+            suggestions: [],
         }))
     }
 
@@ -54,10 +54,13 @@ export default class AutoCompleteText extends React.Component {
         return (
             <div className="AutoCompleteText">
                 <form onSubmit={this.onSubmit.bind(this)}>
-                    <input value={text} onChange={this.onTextChanged} placeholder="City..." type="text" />
-                    {this.renderSuggestions()}
+                    <input value={text} onChange={this.onTextChanged} aria-label="City Input" name="city-input" placeholder="City..." type="text" />
+                    <div aria-hidden="true">
+                        {this.renderSuggestions()}
+                    </div>
                     <button className="AutoCompleteText__submit-btn">Get Weather</button>
                 </form>
+                
             </div>
 
         )

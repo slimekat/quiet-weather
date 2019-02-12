@@ -16,7 +16,7 @@ class App extends React.Component {
     description: undefined,
     error: undefined,
     scale: "C",
-    owmcode:"721",
+    owmcode: "721",
 
     coords: {
       latitude: undefined,
@@ -95,18 +95,20 @@ class App extends React.Component {
             <div className="container-fluid">
               <div className="col">
                 <div className="row-xs-2 title-container">
-                  <Titles />
-                  <Weather
-                    temperature={this.state.temperature}
-                    city={this.state.city}
-                    country={this.state.country}
-                    humidity={this.state.humidity}
-                    description={this.state.description}
-                    error={this.state.error}
-                    tempConvert={this.tempConvert.bind(this)}
-                    scale={this.state.scale}
-                    owmcode={this.state.owmcode}
-                  />
+                  <div className="weather-container">
+                    <Titles />
+                    <Weather
+                      temperature={this.state.temperature}
+                      city={this.state.city}
+                      country={this.state.country}
+                      humidity={this.state.humidity}
+                      description={this.state.description}
+                      error={this.state.error}
+                      tempConvert={this.tempConvert.bind(this)}
+                      scale={this.state.scale}
+                      owmcode={this.state.owmcode}
+                    />
+                  </div>
                   <Scale
                     selection={this.state.scale}
                     onChange={this.changeScale}
@@ -115,15 +117,18 @@ class App extends React.Component {
                 </div>
                 <div className="row-xs-4 form-container">
                   <div className="input-container">
-                  <AutoCompleteText className="input-field"
+                    <AutoCompleteText className="input-field"
                       items={cities}
                       getWeather={this.getWeather}
                     />
                   </div>
-                    
- 
-                  <button className="location-btn" onClick={this.getLocation.bind(this)}><i className="fas fa-location-arrow"></i></button>
-                  
+                  <button className="location-btn" aria-label="Location Button" onClick={this.getLocation.bind(this)}><i className="fas fa-location-arrow"></i></button>
+                </div>
+                <div className="row-xs-2 credits-container">
+                  <p className="credits">
+                    <span>Developed by Arielle Grimes. </span>
+                    <span>Made with <i className="fab fa-react" aria-label="React Logo" /></span>
+                  </p>
                 </div>
               </div>
             </div>
