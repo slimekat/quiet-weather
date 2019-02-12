@@ -2,17 +2,21 @@
   "short_name": "Quiet",
   "name": "Quiet Weather",
   "icons": [{
-      "src": "android-chrome-192x192.png",
+      "src": "%PUBLIC_URL%/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "android-chrome-512x512.png",
+      "src": "%PUBLIC_URL%/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
+  "description" : "A simple current weather app, featuring location information as well as worldwide city data!",
   "start_url": ".",
+  "dir": "ltr",
+  "lang": "en-US",
+  "orientation": "portrait-primary",
   "display": "standalone",
   "theme_color": "#13041f",
   "background_color": "#13041f"
