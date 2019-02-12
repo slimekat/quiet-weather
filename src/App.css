@@ -37,7 +37,7 @@ body {
 
 .title-container {
   height: 65vh;
-  -webkit-background: url("img/weather-app-bg-min.png") center center no-repeat;
+  /* -webkit-background: url("img/weather-app-bg-min.png") center center no-repeat; */
   background: url("img/weather-app-bg.webp") center center no-repeat;
   background-size: cover;
   display: flex;
@@ -45,6 +45,7 @@ body {
   align-items: top;
   justify-content: space-between;
   text-align: center;
+  background-color:#13041f;
 
   color: rgb(250, 220, 181);
 }

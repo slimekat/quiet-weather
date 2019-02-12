@@ -20,7 +20,7 @@ const Weather = props => (
             }
             {
                 props.humidity && <p className="weather__key">Humidity:
-                    <span className="weather__value"> {props.humidity}</span>
+                    <span className="weather__value"> {props.humidity} %</span>
                 </p>
             }
             {
