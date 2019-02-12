@@ -7,12 +7,12 @@
   "static/js/1.0a5f6a02.chunk.js.map": "./static/js/1.0a5f6a02.chunk.js.map",
   "runtime~main.js": "./static/js/runtime~main.4a686d48.js",
   "runtime~main.js.map": "./static/js/runtime~main.4a686d48.js.map",
-  "static/media/bootstrap.min.css": "./static/media/glyphicons-halflings-regular.f4769f9b.eot",
+  "static/media/bootstrap.min.css": "./static/media/glyphicons-halflings-regular.448c34a5.woff2",
   "static/media/weather-icons.min.css": "./static/media/weathericons-regular-webfont.ecaf8b48.svg",
   "static/media/App.css": "./static/media/weather-app-bg-min.8bef8568.png",
   "static/css/main.5a3c35e0.chunk.css.map": "./static/css/main.5a3c35e0.chunk.css.map",
   "static/css/1.003d3151.chunk.css.map": "./static/css/1.003d3151.chunk.css.map",
   "index.html": "./index.html",
-  "precache-manifest.da484ad828d8bdced1f58abed6e2e77c.js": "./precache-manifest.da484ad828d8bdced1f58abed6e2e77c.js",
+  "precache-manifest.4c02bce531caad911da842d6b8d09f8f.js": "./precache-manifest.4c02bce531caad911da842d6b8d09f8f.js",
   "service-worker.js": "./service-worker.js"
 }
