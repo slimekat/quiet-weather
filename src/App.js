@@ -53,13 +53,13 @@ class App extends React.Component {
     let pos = await new Promise((resolve, reject) => {
       navigator.geolocation.getCurrentPosition(resolve, reject)
     });
-    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&APPID=${API_KEY}`);
+    const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&APPID=${API_KEY}`);
     const data = await api_call.json();
     this.updateState(data);
   }
 
   getWeather = async (city) => {
-    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}`);
+    const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}`);
     const data = await api_call.json();
     this.updateState(data);
   }

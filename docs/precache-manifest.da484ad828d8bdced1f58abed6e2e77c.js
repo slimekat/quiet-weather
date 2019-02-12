@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "./static/media/glyphicons-halflings-regular.89889688.svg"
   },
   {
-    "revision": "26da466aa434617f7821",
+    "revision": "aaab89c3b58a2ad120af",
     "url": "./static/css/main.5a3c35e0.chunk.css"
   },
   {
@@ -20,6 +20,10 @@ self.__precacheManifest = [
     "url": "./static/js/runtime~main.4a686d48.js"
   },
   {
+    "revision": "fa2772327f55d8198301fdb8bcfc8158",
+    "url": "./static/media/glyphicons-halflings-regular.fa277232.woff"
+  },
+  {
     "revision": "f4769f9bdb7466be65088239c12046d1",
     "url": "./static/media/glyphicons-halflings-regular.f4769f9b.eot"
   },
@@ -28,16 +32,12 @@ self.__precacheManifest = [
     "url": "./static/media/glyphicons-halflings-regular.448c34a5.woff2"
   },
   {
-    "revision": "fa2772327f55d8198301fdb8bcfc8158",
-    "url": "./static/media/glyphicons-halflings-regular.fa277232.woff"
-  },
-  {
     "revision": "e18bbf611f2a2e43afc071aa2f4e1512",
     "url": "./static/media/glyphicons-halflings-regular.e18bbf61.ttf"
   },
   {
-    "revision": "26da466aa434617f7821",
-    "url": "./static/js/main.26da466a.chunk.js"
+    "revision": "aaab89c3b58a2ad120af",
+    "url": "./static/js/main.aaab89c3.chunk.js"
   },
   {
     "revision": "1cd48d78f06d33973d9d761d426e69bf",
@@ -48,12 +48,12 @@ self.__precacheManifest = [
     "url": "./static/media/weathericons-regular-webfont.8cac70eb.woff"
   },
   {
-    "revision": "4618f0de2a818e7ad3fe880e0b74d04a",
-    "url": "./static/media/weathericons-regular-webfont.4618f0de.ttf"
-  },
-  {
     "revision": "4b658767da6bd92ce2addb3ce512784d",
     "url": "./static/media/weathericons-regular-webfont.4b658767.eot"
+  },
+  {
+    "revision": "4618f0de2a818e7ad3fe880e0b74d04a",
+    "url": "./static/media/weathericons-regular-webfont.4618f0de.ttf"
   },
   {
     "revision": "ecaf8b481729b18f6a8494d9f691cdae",
@@ -68,7 +68,7 @@ self.__precacheManifest = [
     "url": "./static/css/1.003d3151.chunk.css"
   },
   {
-    "revision": "15bc8774328ec7e87c69cb834fe8bdba",
+    "revision": "dfe3e0ba86b5ff5b5325c3b6000ca6f5",
     "url": "./index.html"
   }
 ];
