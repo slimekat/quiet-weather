@@ -4,6 +4,7 @@ import Weather from "./components/Weather"
 import Scale from "./components/Scale"
 import AutoCompleteText from "./components/AutoCompleteText"
 import cities from "./components/cities"
+
 const API_KEY = "b7ef65cab5a1a9406d5088b8b1a40e00";
 
 class App extends React.Component {
