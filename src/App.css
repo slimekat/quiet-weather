@@ -357,6 +357,7 @@ button:active {
     position: relative;
     right: 0px;
     height: 38px;
+    cursor:pointer;
   }
 
   .form-container {
