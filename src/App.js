@@ -52,30 +52,37 @@ class App extends React.Component {
 
   checkInputSelected(inputState) {
     this.setState({
-      inputSelected:inputState
+      inputSelected: inputState
     });
     console.log(inputState);
   };
 
   getLocation = async () => {
-    let pos,lat,lon;
-    try{
+    let pos, lat, lon;
+    try {
       pos = await new Promise((resolve, reject) => {
         navigator.geolocation.getCurrentPosition(resolve, reject)
       });
       lat = pos.coords.latitude;
       lon = pos.coords.longitude;
-    }catch(e){
+    } catch (e) {
       try {
-        const ip = await fetch("http://jsonip.com");
+        const ip = await fetch("https://jsonip.com");
         const ipData = await ip.json();
-        pos = await fetch(`http://api.ipstack.com/${ipData.ip}?access_key=2a5f7d59605166594eb855d656142724`);
+        pos = await fetch(`https://api.ipstack.com/${ipData.ip}?access_key=2a5f7d59605166594eb855d656142724`);
         const locationData = await pos.json();
         lat = locationData.latitude;
         lon = locationData.longitude;
-      }catch(e){
+        console.log("backup success");
+      } catch (e) {
         this.setState({
-          error:"Unable to find location"
+          temperature: undefined,
+          city: undefined,
+          country: undefined,
+          humidity: undefined,
+          description: undefined,
+          owmcode: "721",
+          error: "Unable to find location"
         })
         return;
       }
