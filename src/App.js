@@ -69,10 +69,11 @@ class App extends React.Component {
       try {
         const ip = await fetch("https://jsonip.com");
         const ipData = await ip.json();
-        pos = await fetch(`https://api.ipstack.com/${ipData.ip}?access_key=2a5f7d59605166594eb855d656142724`);
+        // test = https://geo.ipify.org/api/v1?apiKey=at_lNlIaB73CndxSW19ivqUwNWMLcAew&ipAddress=${ipData.ip}
+        pos = await fetch(`https://geo.ipify.org/api/v1?apiKey=at_lNlIaB73CndxSW19ivqUwNWMLcAew&ipAddress=${ipData.ip}`);
         const locationData = await pos.json();
-        lat = locationData.latitude;
-        lon = locationData.longitude;
+        lat = locationData.location.lat;
+        lon = locationData.location.lng;
         console.log("backup success");
       } catch (e) {
         this.setState({
