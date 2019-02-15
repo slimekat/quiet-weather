@@ -18,6 +18,7 @@ class App extends React.Component {
     error: undefined,
     scale: "C",
     owmcode: "721",
+    inputSelected: false,
 
     coords: {
       latitude: undefined,
@@ -49,12 +50,38 @@ class App extends React.Component {
     });
   };
 
-  getLocation = async () => {
-    let pos = await new Promise((resolve, reject) => {
-      navigator.geolocation.getCurrentPosition(resolve, reject)
+  checkInputSelected(inputState) {
+    this.setState({
+      inputSelected:inputState
     });
-    const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&APPID=${API_KEY}`);
-    const data = await api_call.json();
+    console.log(inputState);
+  };
+
+  getLocation = async () => {
+    let pos,lat,lon;
+    try{
+      pos = await new Promise((resolve, reject) => {
+        navigator.geolocation.getCurrentPosition(resolve, reject)
+      });
+      lat = pos.coords.latitude;
+      lon = pos.coords.longitude;
+    }catch(e){
+      try {
+        const ip = await fetch("http://jsonip.com");
+        const ipData = await ip.json();
+        pos = await fetch(`http://api.ipstack.com/${ipData.ip}?access_key=2a5f7d59605166594eb855d656142724`);
+        const locationData = await pos.json();
+        lat = locationData.latitude;
+        lon = locationData.longitude;
+      }catch(e){
+        this.setState({
+          error:"Unable to find location"
+        })
+        return;
+      }
+    }
+    const weather_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${API_KEY}`);
+    const data = await weather_call.json();
     this.updateState(data);
   }
 
@@ -65,7 +92,6 @@ class App extends React.Component {
   }
 
   updateState(data) {
-    console.log(data);
     if (data.message) {
       this.setState({
         temperature: undefined,
@@ -108,6 +134,7 @@ class App extends React.Component {
                       tempConvert={this.tempConvert.bind(this)}
                       scale={this.state.scale}
                       owmcode={this.state.owmcode}
+                      inputSelected={this.state.inputSelected}
                     />
                   </div>
                   <Scale
@@ -121,6 +148,7 @@ class App extends React.Component {
                     <AutoCompleteText className="input-field"
                       items={cities}
                       getWeather={this.getWeather}
+                      checkInputSelected={this.checkInputSelected.bind(this)}
                     />
                   </div>
                   <button className="location-btn" aria-label="Location Button" onClick={this.getLocation.bind(this)}><i className="fas fa-location-arrow"></i></button>
