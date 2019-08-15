@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/quiet-weather/precache-manifest.6f4189bf657cf625ae63ceaf5e3d183e.js"
+  "/quiet-weather/precache-manifest.39419f87915c44e941a8654990696941.js"
 );
 
 self.addEventListener('message', (event) => {
