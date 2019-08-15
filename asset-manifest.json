@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/quiet-weather/static/css/main.944aa49b.chunk.css",
+    "main.js": "/quiet-weather/static/js/main.fd5c1d0e.chunk.js",
+    "main.js.map": "/quiet-weather/static/js/main.fd5c1d0e.chunk.js.map",
+    "runtime~main.js": "/quiet-weather/static/js/runtime~main.3bf8dcb7.js",
+    "runtime~main.js.map": "/quiet-weather/static/js/runtime~main.3bf8dcb7.js.map",
+    "static/css/2.f3e80e02.chunk.css": "/quiet-weather/static/css/2.f3e80e02.chunk.css",
+    "static/js/2.61d22eb8.chunk.js": "/quiet-weather/static/js/2.61d22eb8.chunk.js",
+    "static/js/2.61d22eb8.chunk.js.map": "/quiet-weather/static/js/2.61d22eb8.chunk.js.map",
+    "index.html": "/quiet-weather/index.html",
+    "precache-manifest.40ed387cec65b8bf80721a5af56d8bbf.js": "/quiet-weather/precache-manifest.40ed387cec65b8bf80721a5af56d8bbf.js",
+    "service-worker.js": "/quiet-weather/service-worker.js",
+    "static/css/2.f3e80e02.chunk.css.map": "/quiet-weather/static/css/2.f3e80e02.chunk.css.map",
+    "static/css/main.944aa49b.chunk.css.map": "/quiet-weather/static/css/main.944aa49b.chunk.css.map",
+    "static/media/all.min.css": "/quiet-weather/static/media/fa-solid-900.fdc155d5.svg",
+    "static/media/bootstrap.min.css": "/quiet-weather/static/media/glyphicons-halflings-regular.fa277232.woff",
+    "static/media/App.css": "/quiet-weather/static/media/weather-app-bg.e14203e4.webp",
+    "static/media/weather-icons.min.css": "/quiet-weather/static/media/weathericons-regular-webfont.ecaf8b48.svg"
+  }
+}
