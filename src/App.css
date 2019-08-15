@@ -64,9 +64,10 @@ body {
   font-size: 40px;
   letter-spacing: 2px;
   line-height: 1.3;
-  font-family: 'Roboto Slab', serif;
-  margin: 0 2%;
-  margin-top: 8%;
+  font-family: 'Open Sans', serif;
+  /* margin: 0 2%; */
+  /* margin-top: 4%; */
+  margin: 2% 2% 6% 2%;
   /* white-space:nowrap; */
 }
 
@@ -378,8 +379,9 @@ button:active {
     font-size: 35px;
     letter-spacing: 2px;
     line-height: 1.3;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Open Sans', serif;
     margin: 0 0%;
+    margin-bottom: 4%;
     margin-top: 4%;
   }
 

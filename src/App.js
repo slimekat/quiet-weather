@@ -39,7 +39,7 @@ class App extends React.Component {
     if (this.state.scale === "C") {
       return inputTemp;
     } else {
-      inputTemp = (inputTemp + 32);
+      inputTemp = ((inputTemp*1.8000) + 32);
       return inputTemp;
     }
   }
@@ -137,7 +137,7 @@ class App extends React.Component {
                       city={this.state.city}
                       country={this.state.country}
                       humidity={this.state.humidity}
-                      description={this.state.description}
+                      // description={this.state.description}
                       error={this.state.error}
                       tempConvert={this.tempConvert.bind(this)}
                       scale={this.state.scale}
@@ -163,7 +163,7 @@ class App extends React.Component {
                 </div>
                 <div className="row-xs-2 credits-container">
                   <p className="credits">
-                    <span>Developed by Arielle Grimes. </span>
+                    <span>Developed by Sadie Lee. </span>
                     <span>Made with <i className="fab fa-react" aria-label="React Logo" /></span>
                   </p>
                 </div>
